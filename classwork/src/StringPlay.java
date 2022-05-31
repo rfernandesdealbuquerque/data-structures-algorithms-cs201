@@ -10,7 +10,9 @@ public class StringPlay {
 	public static String concat(String s,
 								int reps) {
 		String ret = "";
-		for(int k=0; k < reps; k++) {
+		int k = 0;
+		while (k < reps) {
+			k++;
 			ret = ret + s;
 		}
 		return ret;
@@ -32,7 +34,22 @@ public class StringPlay {
 	}
 	 
 	public static void main(String[] args) {
+		
+		System.out.println(StringPlay.concat("hello", 50));
+		
+		String[] rodrigo = new String[8];
+		int tamanho = rodrigo.length; //length eh definido como um atributo do Array pois Arrays sao fixos --> tamanho eh caracteristica/atributo do objeto
+									  //length necessario para a propria criacao do objeto
+		
+		char data[] = {'r','o','d','r','i','g','o'};
+		String str1 = new String(data);
+		String str2 = "rodrigo";
+		
+		System.out.println(str1.equals(str2));
+		
+		
 
+		/*
 		String source = "hello";
 		int first = 10000;
 		int last = 200000;
@@ -54,5 +71,6 @@ public class StringPlay {
 			System.out.printf("\t%d\t%1.3f\n",
 					          bs.length(),buildTime);
 		}
+		*/
 	}
 }
