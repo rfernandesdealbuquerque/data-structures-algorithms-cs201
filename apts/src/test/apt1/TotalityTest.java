@@ -1,9 +1,9 @@
-package test;
+package test.apt1;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import main.Totality;
+import main.apt1.Totality;
 
 public class TotalityTest {
 	
@@ -11,7 +11,7 @@ public class TotalityTest {
 	
 	@DisplayName("Totality Test")
 	@Test
-	public void sumTest() {
+	public void testSum() {
 		int[] a = {1,2,3,4,5};
 		String stype = "even";
 		int sum = totality.sum(a, stype);

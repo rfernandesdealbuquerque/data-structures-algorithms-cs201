@@ -1,4 +1,4 @@
-package main;
+package main.apt1;
 
 public class Totality {
 	public int sum(int[] a, String stype) {

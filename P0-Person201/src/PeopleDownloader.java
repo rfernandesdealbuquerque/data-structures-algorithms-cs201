@@ -40,7 +40,9 @@ public class PeopleDownloader {
                 try {
                     String json = data[1];
                     Person201 p = gs.fromJson(data[1], Person201.class);
-                    ourList.add(p);
+                    if(!ourList.contains(p)) {
+                    	ourList.add(p);
+                    }
                 }
                 catch (JsonParseException jspe) {
                     // silently avoid bad json syntax

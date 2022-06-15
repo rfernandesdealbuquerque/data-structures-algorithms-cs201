@@ -92,4 +92,33 @@ public class Person201 {
         }
         return String.format("%s %s @ %s %s",myName,myPhrase,lats,lons);
     }
+    
+    @Override
+    public boolean equals(Object o) {
+    	//protection code
+    	if(this == o) return true;
+    	if(! (o instanceof Person201)) return false;
+    	if(o == null) return false;
+    	
+    	Person201 person = (Person201) o; //casting an Object pointer to a Person201 pointer 
+    	
+    	if(!this.myName.equals(person.myName)) {
+    		return false;
+    	}
+    	
+    	else if(this.myLatitude != person.myLatitude) {
+    		return false;
+    	}
+    	
+    	else if(this.myLongitude != person.myLongitude) {
+    		return false;
+    	}
+    	
+    	else if(!this.myPhrase.equals(person.myPhrase)){
+    		return false;
+    	}
+    	
+    	return true;
+    }
+    
 }
