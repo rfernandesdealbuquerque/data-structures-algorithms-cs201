@@ -11,6 +11,8 @@ public class UniqueWithArrayList {
         while (s.hasNext()) {
             wcount += 1;
             String word = s.next();
+            if(!set.contains(word)) //slow down the performance of arraylist a lot
+            	set.add(word);
         }
         double end = System.nanoTime();
         double time = (end-start)/1e9;
